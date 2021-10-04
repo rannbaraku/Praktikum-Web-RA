@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Saya menggunakan style pada html, karena ditakutkan belum boleh menggunakan file css terpisah-->
+    <style>
+
+        /*Mengatur layout body*/
+        body{    
+            width: 100vh;
+            height: 100vh;
+            background-image: linear-gradient(rgba(16, 110, 173, 0.26),
+             rgba(255, 255, 255, 0.753) ), url(asetimg/wallhaven-pk8pzj_1920x1080.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /*Mengatur secara umum */
+        *{       
+            font-family: 'Ubuntu', sans-serif;     
+            color: rgb(40, 54, 58);
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        
+        /*Mengatur text dengan ukuran h2*/
+        .h2{
+            font-size: 8px;
+        }
+
+        /*Mengatur layout navigasi*/
+        nav{
+            
+            position:absolute;  
+            background-color: rgba(3, 74, 77, 0.356);
+            height: 50px;
+            width: 100%;
+        } 
+
+        /*Mengatur baris navigasi*/
+        nav ul{
+            float: right;
+            margin-right: 10px;
+      
+        }
+
+        /*Mengatur text h1 pada navigasi*/
+        nav h1{
+        font-size: 20px;
+        line-height: 50px;
+        }
+
+        /*Mengatur item pada navigasi*/
+        nav ul li {
+            display: inline-block;
+            margin: 0 0px;
+            line-height: 48px;
+            font-weight: 10;
+            color: white;
+        }
+
+        /*Mengatur link pada item navigasi*/
+        nav ul li a{
+            
+            padding: 14px 20px;
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+    
+        }
+
+        /*Mengatur  feedback pada item navigasi*/
+        a:hover{
+            background-color: rgba(56, 158, 253, 0.726);
+        }
+        a:active{
+            background-color: rgba(21, 63, 102, 0.541);
+        }
+
+        /*Mengatur text h1 pada navigasi*/
+        nav h1{
+            color : #e7eeff;
+            font-size: 30px;
+            font-weight: 90;
+            line-height: 50px;
+            padding-left: 20px;
+            font-weight: 500;
+        }
+
+        /*Mengatur judul*/
+        .judul{
+            position: absolute;
+            margin-top : 55px;
+            left: 140px;
+        }
+
+        /*Mengatur text h2 pada judul*/
+        .judul h2{
+            color: rgb(36, 70, 90);
+            font-size: 40px;
+
+        }
+
+        /*Mengatur text h3 pada judul*/
+        .judul h3{
+            color: rgb(96, 119, 133);
+        }
+
+        /*Mengatur konten utama*/
+        section{
+            position: absolute;
+            margin-top: 120px;
+            margin-left: 10%;
+            font-size: 18px;
+        }
+
+        /*Mengatur garis tenah halaman*/
+        .garis{
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            bottom: 0px;
+            width: 2px;
+            height: 150%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        /*Mengatur text masukan saran*/
+        .related{
+            position: absolute;
+            right: 70px;
+            bottom: 100px;
+            font-size: 20px;
+            text-align: left;
+            padding: 10px;
+            padding-right: 400px;
+            color:rgba(53, 95, 107, 0.829);
+            font-weight: 900;
+
+            border-bottom: 2px solid rgb(255, 255, 255);
+
+
+        }
+
+        /*Mengatur tombol loncat ke top page*/
+        .naik{
+       
+            color: rgb(255, 255, 255);
+            position: fixed;
+            width: 50px;
+            height:50px;
+            border-radius: 50%;
+            background-color: rgb(95, 212, 212);
+            bottom: 20px;
+            right: 20px;
+            text-align: center;
+            font-size: 30px;
+            line-height: 50px;
+            z-index: 3;
+        }
+
+        /*Mengatur header*/
+        .gambar{
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            padding: 20px;
+            background-color: white;
+        }  
+
+        /*Mengatur layout formulir*/
+       .formulir{
+           position: absolute;
+           left: 43rem;
+           margin-top: 36rem;
+       }
+
+        /*Mengatur isian formulir*/
+        .isian{
+            width : 80%;
+            padding: 0.5rem 1rem;
+            background-color:rgba(246, 252, 255, 0.753);
+            font-size: 1rem;
+            border: 2px rgba(0, 0, 0, 0);
+            margin-bottom: 22px;
+            transition: .3s;
+            border-radius: 5px;
+
+        }
+
+        /*mengatur style hover pada input tipe teks */
+        .isian:hover{
+            background-color:rgba(0, 0, 0, 0.1);
+        }
+
+        /*mengatur style focus pada input tipe teks */
+        .isian:focus{
+            background-color:rgba(204, 235, 255, 0.753);
+            border: 2px solid rgba(188, 225, 255, 0.753);
+        }
+
+        /*Mengatur tombol naik ke atas*/
+        .Tombol{
+            margin-left: 430px;
+            width: 20%;
+            color: rgba(0, 27, 70, 0.5);
+            font-weight: 500;
+            background-color:white;
+            border: 5px solid rgb(212, 232, 255);
+        }
+
+        /*Mengatur tfooter*/
+        .footer{
+            font-size: 10px;
+            font-style: italic;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            color: white;
+            top: 93%;
+            position:fixed;
+            padding-left: 30px;
+            padding-top: 7px;  
+            background-color: rgb(15, 71, 134);
+            height: 50px;
+            width: 100%;
+            z-index: 2;
+        } 
+
+    </style>
+
+
+
+
+    <head>
+        <meta charset="uft-8">
+        <title>
+            Praktikum minggu ke 1 Randi Baraku
+        </title>
+
+
+        <!--link untuk font yang saya gunakan-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+
+    </head>
+
+
+    <body>
+        <!--Navigasi bar-->
+        <header>
+        <nav>
+            <ul>
+                <li><a href="https://myanimelist.net/anime/38826/Tenki_no_Ko">Kunjungi</a></li>
+                <li><a href="https://myanimelist.net/anime/38826/Tenki_no_Ko">Myanime</a></li>
+                <li><a href="https://myanimelist.net/anime/38826/Tenki_no_Ko">List</a></li>
+                <li><a href="https://myanimelist.net/anime/38826/Tenki_no_Ko">Berikut</a></li>
+            </ul>   
+            <h1>Rann</h1>
+        </nav>
+        </header>
+
+        <!--Tombol icon untuk jump ke bagian atas page-->
+        <a href="#top" class="naik" ><img src="https://cdn-icons-png.flaticon.com/128/271/271239.png" alt="" width="25" height="25"></a>
+
+
+        <!--gambar utama-->
+            <div class="gambar">
+                <img src="asetimg/wallhaven-mdz93y_1366x768.png" width="600" height="350"></a>
+            </div>
+
+        <!-- judul konten -->    
+            <span class="judul">
+                <h2>The Garden of Words </h2>
+                <h3>  言の葉の庭</h3>
+            </span>
+
+        <!--content utama, berisi penjelasan mengenai judul dan topik yang dibahas-->
+            <section>
+
+            <br/>The Garden of words merupakan 
+            <br/>sebuah animasi 2D yang dibesut oleh studio KomikWave.
+            <br/>Movie ini berdurasi 45 menit dan rilis pada tahun 2013
+            <br/>lalu. Movie ini bercerita mengenai seorang pelajar 
+            <br/>yang ditinggal orang tua nya bercerai dan tinggal bersama
+            <br/>ayahnya. Hidup yang sederhan serta membantu ayahnya yang
+            <br/>seorang pengerajin sepatu membuat ia terampil pada
+            <br/>seni memahat kayu tersebut. 
+            <br/>Ditengah kehidupannya ia sering menyempatkan waktu
+            <br/>mengunjungi taman dengan gubuk kecil untuk membuat sepatu
+            <br/>Tidak jarang ia membolos sekolah dengan alasan hujan hanya
+            <br/>untuk membuat sepatu di sana<br/>
+
+            <br/>Seperti karya makoto shinkai lainnya, takdir
+            <br/>menjadi aspek penting dalam pembawaan cerita.
+            <br/>Ketika ia tengah memahat sepatu, dalam penantian meredanya
+            <br/>rintik,a menunggu dengan seorang wanita yang cukupd 
+            <br/>dikenalinaya. Wanita ini adalah gurunya sendiri.  
+            <br/>dari balik dinginnya hujan dan serutan kayu,
+            <br/>kisah romansa terikat umur dari guru dan murid 
+            <br/>ini disajikan dengan begitu rapih dan proporsif.<br/>
+
+            <br/>
+            <br/><i>"Jika hijan tidak kunjung mereda</i>
+            <br/><i>Masih sanggupkah kau menunggu"</i><br/>
+            <br/><i>"Bahkan jika hijan tidak pernah turun</i>
+            <br/><i>Aku akan tetap menunggumu"</i><br><br>
+
+            
+            <br/>Dialog diatas merupakan kutipan yang saya ambil
+            <br/>dari movie ini. movie ini juga mengangkat 
+            <br/>point sastra lama jepang yang dalam dan 
+            <br/>penuh makna.<br> 
+            <br/>Pada akhirnya penulis merekomendasikan
+            <br/>movie ini sebagai pilihan yang tepat
+            <br/>bagi penikmat roman yang anti mainstream,
+            <br/>grafik menawan, serta disajikan dalam durasi
+            <br/>singkat. Semoga bermanfaat.
+            <br/>
+            <br/>Terimakasih.
+            <br/><br><br><br/><br><br>
+            </section> 
+
+        <!--Garis putih di tengah page-->
+        <div class="garis"></div>
+
+        <!--Tulisan "kirimkan masukan" dibawah foto-->
+        <div class="related">Kirim masukan anda</div>
+
+    
+        <!--formulir pengisian saran-->
+        <form action=" " class="formulir">
+            
+            <!--meminta nama-->
+            <input type="text" class="isian" required  placeholder="Siapa namamu">
+            
+            <!--meminta email-->
+            <input type="email" class="isian" required placeholder="Masukan emailmu">
+            
+            <!--meminta subjek saran-->
+            <input type="text" class="isian" required  placeholder="Saran terkait">
+           
+            <!--meminta masukan saran yang akan disampaikan-->
+            <textarea rows="4" cols="50" class="isian"  required form="usrform" placeholder="Tuliskan masukanmu"></textarea>
+ 
+            <!--tombol kirim-->            
+            <input type="submit" class="isian Tombol"  value="Kirim">
+
+        </form>
+
+    <!--footer page-->
+    <div class="footer">Randi baraku - 119140061 <br> ©2021 All Rights Reserved</div>
+
+        </html>
