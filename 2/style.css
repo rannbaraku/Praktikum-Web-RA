@@ -1,0 +1,138 @@
+/* setting body*/
+		body{
+			color: #fff;
+            background-image: linear-gradient(rgba(16, 110, 173, 0.26),
+             rgba(255, 255, 255, 0.945) ), url(asetimg/wallhaven-yj1dj7_1366x768.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+  
+        }
+
+/* style untuk grid pada mode potrait/mobile */		
+        #content{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(10px, auto);
+            grid-gap: 10px;
+            max-width: 700px;
+            margin: 0 auto;
+            grid-template-areas:
+                "header header header header"
+                "nav nav nav nav"
+                "aside aside aside aside"
+                "section section section section"
+                "footer footer footer footer";
+        }
+   
+/* style untuk grid pada mode desktop/pc  */
+        @media screen and (min-width: 760px){
+    		#content{
+    			display: grid;
+    			grid-template-columns: repeat(4, 1fr);
+    			grid-auto-rows: minmax(10px, auto);
+    			grid-gap: 10px;
+    			max-width: 800px;
+    			margin: 0 auto;
+                grid-template-areas:
+                    "header header header header"
+                    "nav nav nav nav"
+                    "section section section aside"
+                    "section section section aside"
+                    "footer footer footer footer";
+    		}
+
+/* stylekontainer utama grid */
+        }
+		#content > *{
+         
+			background: #72727246;
+            padding: 10px;
+            filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.3));
+		}
+      
+/* style untuk header */       
+        header{
+            grid-area: header;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.233),
+             rgba(207, 207, 207, 0.733) ), url(asetimg/images.jpeg) !important;     
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+/* grid untuk artikel */        
+        aside{
+            grid-area: aside;
+        }
+
+/* grid untuk nafigasi bar*/       
+        nav{
+            background-color: rgba(255, 255, 255, 0.753)!important;
+            grid-area: nav;
+        }
+
+/* gri untuk konten utama */        
+        section{
+            grid-area: section;
+        }
+
+/* grid untuk footer */        
+        footer{
+            grid-area: footer;
+            background: #333 !important;
+            font-style: italic;       
+            font-size: 0.5rem;
+            text-align: center;
+        }
+
+/* stye untuk link pada nav bar */
+        nav a {
+            text-decoration: none;
+            color: rgba(61, 73, 78, 0.76);
+            position: relative;
+            padding: 10px;
+            right: 10px;
+        }
+
+/* efek hoover pada nav bar */        
+        a:hover{
+            background-color: rgb(172, 174, 177);
+        }
+
+/* set up logo itera */        
+        .iteralogo {
+            width : 90px;
+            height: 90px;
+            float: right;
+            margin-right: 2rem;
+        }
+
+/* setup foto saya */        
+        .fotosaya{
+            width: 100%;
+            height: 60%;
+        }
+
+/* style untuk text h3 */        
+        h3{
+            font-size: 0.8rem;
+            padding-top: 20px;
+            border-bottom: solid rgba(217, 224, 230, 0.836)2px;
+        }
+
+/* Tstyle untuk link artikel/berita */        
+        aside a{
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.897);
+            font-size: 0.8rem;
+
+        }
+
+/* tulisan artikel */        
+        article{
+            font-weight: 1000;
+            padding-bottom: 30px;
+            border-bottom: solid rgba(255, 255, 255, 0.836)3px;
+        }
+      
